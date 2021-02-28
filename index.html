@@ -3,16 +3,17 @@
 <head>
     <title>Dice Roll</title>
     <script src="./index.js" defer></script>
-    <!-- <link rel="stylesheet" href="./index.css">     -->
+    <link rel="stylesheet" href="./index.css">    
 </head>
 <body>
     <h1>Dice Roller</h1>
     <form id="roll-dice">
-        <label for="num-of-dice">Number of dice: </label>
-        <input id="num-of-dice"type="number" min="1">
+        <label for="num-of-dice">Number of dice: 
+            <input id="num-of-dice"type="number" min="1">
+        </label>
         <button type="submit">Roll the dice!</button>
     </form>
-    <section>
+    <section id="section-one">
         <p id="dice-para"></p>
         <p id="sum-para">Sum = </p>
     </section>

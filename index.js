@@ -19,6 +19,7 @@ const diceRoller = (event) => {
 rollCount++
 displayDice.textContent = `${rollResult}`;
 displaySum.textContent = `Sum = ${sum}`;
+history()
 }
 
 const ul = document.querySelector("ul");
@@ -28,4 +29,5 @@ const history = () => {
     listItem.textContent = displayDice.textContent;
     ul.appendChild(listItem);
 }
+
 rollDiceBtn.addEventListener("submit", diceRoller);
