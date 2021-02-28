@@ -6,6 +6,8 @@ const dice = [
     { die:"&#9860", value: 5},
     { die:"&#9861", value: 6},
 ]
+
+debugger
 const numOfDice = document.querySelector("#num-of-dice"); // grab user input
 const rollDiceBtn = document.querySelector("#roll-dice"); // grab button
 const displayDice = document.querySelector("#dice-para"); // display roll result
@@ -21,11 +23,11 @@ const diceRoller = (event) => {
     const userInput = Number(numOfDice.value);
     for(let i = 0; i < userInput; i++) {
         const randNum = Math.floor(Math.random() * 6);
-        rollResult += randNum;
-        sum += randNum;
+        rollResult += dice[randNum]["die"];
+        sum += dice[randNum]["value"];
     }
 rollCount++
-displayDice.textContent = `${rollResult}`;
+displayDice.innerHTML = rollResult;
 displaySum.textContent = `Sum = ${sum}`;
 history()
 }
