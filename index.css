@@ -15,5 +15,8 @@ section {
 
 p { 
     height: 20px;
+}
 
+#dice-para, ul {
+    font-size: 35px;
 }
