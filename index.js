@@ -5,7 +5,7 @@ let rollResult = "";
 
 const diceRoll = (event) => {
     event.preventDefault();
-    rollResult = 0;
+    rollResult = "";
     const userInput = Number(numOfDice.value);
     for(let i = 0; i < userInput; i++) {
         const randNum = Math.floor(Math.random() * 6);
