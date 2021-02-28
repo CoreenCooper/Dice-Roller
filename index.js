@@ -11,23 +11,27 @@ const numOfDice = document.querySelector("#num-of-dice"); // grab user input
 const rollDiceBtn = document.querySelector("#roll-dice"); // grab button
 const displayDice = document.querySelector("#dice-para"); // display roll result
 const displaySum = document.querySelector("#sum-para"); // display sum result
-let rollResult = "";
 let rollCount = 0;
 
 const diceRoller = (event) => {
     event.preventDefault();
-    rollResult = "";
+    let rollResult = "";
     let sum = 0;
     const userInput = Number(numOfDice.value);
     for(let i = 0; i < userInput; i++) {
         const randNum = Math.floor(Math.random() * 6);
-        rollResult += dice[randNum]["die"];
+        rollResult += dice[randNum]["die"] + " ";
         sum += dice[randNum]["value"];
     }
 rollCount++
 displayDice.innerHTML = rollResult;
 displaySum.textContent = `Sum = ${sum}`;
-history()
+history();
+resetInput();
+}
+
+const resetInput = () => {
+    numOfDice.value = "";
 }
 
 const ul = document.querySelector("ul");
