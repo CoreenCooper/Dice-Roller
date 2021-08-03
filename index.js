@@ -1,3 +1,7 @@
+
+// try using the image
+// use an array of just the dice as elements and keep track of the index ([i + 1])
+// object with entities:&#9856, value:1
 const dice = [
     { die:"&#9856", value: 1},
     { die:"&#9857", value: 2},
@@ -6,6 +10,7 @@ const dice = [
     { die:"&#9860", value: 5},
     { die:"&#9861", value: 6},
 ]
+
 
 const numOfDice = document.querySelector("#num-of-dice"); // grab user input
 const rollDiceBtn = document.querySelector("#roll-dice"); // grab button
